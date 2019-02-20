@@ -5,7 +5,7 @@ Created: 2019 Feb 20
 Author: Lionel Tran
 
 Description:
-Validate Calibrate Camera in ATE3
+Validate Calibrate Camera on ATE3
 """
 import time
 import numpy as np
