@@ -244,40 +244,40 @@ for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
                 ADJUST_STEP = 1
 
         if ADJUST_STEP == 1:
-            LENSES_TEXT = "Rotate clockwise" 
+            LENSES_TEXT = "Rotate lens clockwise" 
             if BLURRY_MAX - fm > 70:
-                LENSES_TEXT = "Rotate counterclockwise" 
+                LENSES_TEXT = "Rotate lens counterclockwise" 
                 ADJUST_STEP = 2
 
         if ADJUST_STEP == 2:
             if BLURRY_MAX - fm < 10:
-                LENSES_TEXT = "Rotate counterclockwise" 
+                LENSES_TEXT = "Rotate lens counterclockwise" 
                 ADJUST_STEP = 3
 
         if ADJUST_STEP == 3:
             if BLURRY_MAX - fm > 70:
-                LENSES_TEXT = "Rotate clockwise"
+                LENSES_TEXT = "Rotate lens clockwise"
                 ADJUST_STEP = 4
 
         if ADJUST_STEP == 4:
-            LENSES_TEXT = "Rotate clockwise slowly until pass"
+            LENSES_TEXT = "Rotate lens clockwise slowly"
             if BLURRY_MAX - fm < BLUR_DEVIATION:
                 color = (0, 255, 0)
-                LENSES_TEXT = "Passed. Configurate lenses DONE"
+                LENSES_TEXT = "Lens DONE"
                 # ADJUST_DONE = True
                 ADJUST_STEP = 5
 
         if ADJUST_STEP == 5:
             if BLURRY_MAX - fm > BLUR_DEVIATION:
                 LENSES_TEXT_COLOR = RED
-                LENSES_TEXT = "Reconfigure lenses needed"
+                LENSES_TEXT = "Adjust lens needed"
                 XYZ_TEXT = ""
 
             else:
                 XYZ_TEXT_COLOR = RED
-                XYZ_TEXT = "Configuring x, y, z ..."
+                XYZ_TEXT = "Adjusting x, y, z ..."
                 LENSES_TEXT_COLOR = GREEN
-                LENSES_TEXT = "Lenses DONE"
+                LENSES_TEXT = "Lens DONE"
 
                 left_img    = copy_RGB[LEFT[0]:LEFT[0]+SHORTER_EDGE, LEFT[1]:LEFT[1]+LONGER_EDGE]
                 right_img   = copy_RGB[RIGHT[0]:RIGHT[0]+SHORTER_EDGE, RIGHT[1]:RIGHT[1]+LONGER_EDGE]
