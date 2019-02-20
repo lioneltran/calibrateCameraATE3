@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 """
 PiCamera Class
-Created: 2017 Oct 15
-Author: Thien Doan
+Created: 2019 Feb 20
+Author: Lionel Tran
 
 Description:
-Implementation of the Pi Camera class.
+Validate Calibrate Camera in ATE3
 """
 import time
 import numpy as np
